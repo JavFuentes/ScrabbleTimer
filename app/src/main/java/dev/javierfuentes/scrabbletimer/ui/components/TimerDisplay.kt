@@ -27,7 +27,7 @@ fun TimerDisplay(
         TimerState.IDLE -> MaterialTheme.colorScheme.tertiary to MaterialTheme.colorScheme.onTertiary
         TimerState.RUNNING -> MaterialTheme.colorScheme.tertiary to MaterialTheme.colorScheme.onTertiary
         TimerState.PAUSED -> MaterialTheme.colorScheme.tertiary to MaterialTheme.colorScheme.onTertiary
-        TimerState.FINISHED -> MaterialTheme.colorScheme.errorContainer to MaterialTheme.colorScheme.onErrorContainer
+        TimerState.FINISHED -> MaterialTheme.colorScheme.errorContainer to MaterialTheme.colorScheme.onSurface
     }
     Card(
         modifier = modifier.fillMaxWidth(),

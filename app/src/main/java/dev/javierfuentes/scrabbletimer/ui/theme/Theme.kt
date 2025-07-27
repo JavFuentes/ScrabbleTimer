@@ -24,7 +24,7 @@ private val DarkGreenColorScheme = darkColorScheme(
     onSecondaryContainer = GreenContainer,
     
     tertiary = Green3,
-    onTertiary = Green,
+    onTertiary = White,
     
     background = Green,                  // Same dark green as light mode
     onBackground = White,                // White text on dark green
@@ -33,7 +33,7 @@ private val DarkGreenColorScheme = darkColorScheme(
     
     error = Color(0xFFFFB4AB),          // Material error for dark
     onError = Color(0xFF690005),
-    errorContainer = Color(0xFF93000A),
+    errorContainer = Green,
     onErrorContainer = Color(0xFFFFDAD6)
 )
 
@@ -59,7 +59,7 @@ private val LightGreenColorScheme = lightColorScheme(
     
     error = Color(0xFFBA1A1A),         // Material error for light
     onError = White,
-    errorContainer = Color(0xFFFFDAD6),
+    errorContainer = Green,
     onErrorContainer = Color(0xFF410002)
 
 
