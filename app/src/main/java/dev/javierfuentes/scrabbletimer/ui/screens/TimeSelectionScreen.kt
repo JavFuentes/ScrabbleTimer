@@ -1,8 +1,6 @@
 package dev.javierfuentes.scrabbletimer.ui.screens
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -51,17 +49,20 @@ fun TimeSelectionScreen(
                 fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onSurface,
-                modifier = Modifier.padding(bottom = 24.dp)
+                modifier = Modifier.padding(bottom = 16.dp)
             )
             
-            LazyColumn(
-                verticalArrangement = Arrangement.spacedBy(16.dp),
-                modifier = Modifier.fillMaxWidth()
+            Column(
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
             ) {
-                items(timeOptions) { timeOption ->
+                timeOptions.forEach { timeOption ->
                     TimeOptionCard(
                         timeOption = timeOption,
-                        onTimeSelected = onTimeSelected
+                        onTimeSelected = onTimeSelected,
+                        modifier = Modifier.weight(1f)
                     )
                 }
             }
