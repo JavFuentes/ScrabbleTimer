@@ -7,7 +7,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import dev.javierfuentes.scrabbletimer.data.TimeOption
 import dev.javierfuentes.scrabbletimer.ui.screens.TimeSelectionScreen
 import dev.javierfuentes.scrabbletimer.ui.screens.TimerScreen
 
