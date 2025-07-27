@@ -19,12 +19,21 @@
     <string name="time_5_min_desc">Extended time</string>
     
     <!-- Timer Screen -->
-    <string name="timer_screen_title">Timer Screen</string>
-    <string name="selected_time">Selected time: %d minutes</string>
+    <string name="timer_screen_title">Timer</string>
+    <string name="selected_time_minutes">Selected: %d min</string>
+    <string name="time_format">%02d:%02d</string>
     <string name="under_construction">Under construction…</string>
     
-    <!-- Buttons -->
+    <!-- Timer Controls -->
     <string name="play">Play</string>
     <string name="pause">Pause</string>
     <string name="reset">Reset</string>
+    <string name="start_timer">Start Timer</string>
+    <string name="pause_timer">Pause Timer</string>
+    <string name="reset_timer">Reset Timer</string>
+    
+    <!-- Content Descriptions -->
+    <string name="play_pause_button">Play or pause timer</string>
+    <string name="reset_button">Reset timer to initial time</string>
+    <string name="back_button">Go back to time selection</string>
 </resources>

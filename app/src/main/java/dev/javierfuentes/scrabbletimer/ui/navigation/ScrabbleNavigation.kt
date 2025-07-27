@@ -43,7 +43,12 @@ fun ScrabbleNavigation(
             )
         ) { backStackEntry ->
             val minutes = backStackEntry.arguments?.getInt("minutes") ?: 1
-            TimerScreen(selectedMinutes = minutes)
+            TimerScreen(
+                selectedMinutes = minutes,
+                onBackClick = {
+                    navController.popBackStack()
+                }
+            )
         }
     }
 }
