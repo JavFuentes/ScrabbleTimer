@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Scrabble Timer</string>
+    
+    <!-- Time Selection Screen -->
+    <string name="time_selection_title">Select Turn Time</string>
+    <string name="time_selection_subtitle">Choose the time limit for each player\'s turn</string>
+    
+    <!-- Time Options -->
+    <string name="time_1_min">1 min</string>
+    <string name="time_2_min">2 min</string>
+    <string name="time_3_min">3 min</string>
+    <string name="time_4_min">4 min</string>
+    <string name="time_5_min">5 min</string>
+    
+    <string name="time_1_min_desc">Quick game</string>
+    <string name="time_2_min_desc">Moderate pace</string>
+    <string name="time_3_min_desc">Standard time</string>
+    <string name="time_4_min_desc">Relaxed pace</string>
+    <string name="time_5_min_desc">Extended time</string>
+    
+    <!-- Timer Screen -->
+    <string name="timer_screen_title">Timer Screen</string>
+    <string name="selected_time">Selected time: %d minutes</string>
+    <string name="under_construction">Under construction…</string>
+    
+    <!-- Buttons -->
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+</resources>
