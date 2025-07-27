@@ -24,18 +24,7 @@ fun TimeSelectionScreen(
 ) {
     val timeOptions = TimeOption.getTimeOptions()
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = stringResource(R.string.app_name),
-                        fontWeight = FontWeight.Bold
-                    )
-                }
-            )
-        }
-    ) { paddingValues ->
+    Scaffold { paddingValues ->
         Column(
             modifier = modifier
                 .fillMaxSize()

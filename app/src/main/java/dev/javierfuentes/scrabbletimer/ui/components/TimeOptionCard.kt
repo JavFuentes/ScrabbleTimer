@@ -27,7 +27,10 @@ fun TimeOptionCard(
             .fillMaxWidth()
             .fillMaxHeight()
             .clickable { onTimeSelected(timeOption) },
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.tertiary
+        )
     ) {
         Column(
             modifier = Modifier
@@ -40,14 +43,14 @@ fun TimeOptionCard(
                 text = stringResource(timeOption.displayTextRes),
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary,
+                color = MaterialTheme.colorScheme.onTertiary,
                 textAlign = TextAlign.Center
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
                 text = stringResource(timeOption.descriptionRes),
                 fontSize = 12.sp,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = MaterialTheme.colorScheme.onTertiary,
                 textAlign = TextAlign.Center
             )
         }

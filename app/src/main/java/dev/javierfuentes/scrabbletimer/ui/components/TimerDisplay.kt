@@ -5,7 +5,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -25,9 +24,9 @@ fun TimerDisplay(
 ) {
     // Define colors based on timer state
     val (containerColor, textColor) = when (timerState) {
-        TimerState.IDLE -> MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
-        TimerState.RUNNING -> MaterialTheme.colorScheme.primary to MaterialTheme.colorScheme.onPrimary
-        TimerState.PAUSED -> MaterialTheme.colorScheme.secondaryContainer to MaterialTheme.colorScheme.onSecondaryContainer
+        TimerState.IDLE -> MaterialTheme.colorScheme.tertiary to MaterialTheme.colorScheme.onTertiary
+        TimerState.RUNNING -> MaterialTheme.colorScheme.tertiary to MaterialTheme.colorScheme.onTertiary
+        TimerState.PAUSED -> MaterialTheme.colorScheme.tertiary to MaterialTheme.colorScheme.onTertiary
         TimerState.FINISHED -> MaterialTheme.colorScheme.errorContainer to MaterialTheme.colorScheme.onErrorContainer
     }
     Card(

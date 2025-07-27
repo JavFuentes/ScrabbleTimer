@@ -26,10 +26,10 @@ private val DarkGreenColorScheme = darkColorScheme(
     tertiary = Green3,
     onTertiary = Green,
     
-    background = Color(0xFF0F1410),      // Very dark green tint
-    onBackground = GreenContainer,
-    surface = Color(0xFF161B17),         // Dark green surface
-    onSurface = GreenContainer,
+    background = Green,                  // Same dark green as light mode
+    onBackground = White,                // White text on dark green
+    surface = Green,                     // Same dark green surface
+    onSurface = White,                   // White text on dark green surface
     
     error = Color(0xFFFFB4AB),          // Material error for dark
     onError = Color(0xFF690005),
@@ -49,13 +49,13 @@ private val LightGreenColorScheme = lightColorScheme(
     secondaryContainer = Color(0xFFD4F0D8), // Very light green
     onSecondaryContainer = Green,
     
-    tertiary = Green,
-    onTertiary = White,
+    tertiary = Square,
+    onTertiary = Black,
     
-    background = White,
-    onBackground = Green,                // Dark green text
-    surface = GreenSurface,             // Light green tinted surface
-    onSurface = Green,
+    background = Green,                  // Dark green background
+    onBackground = White,                // White text on dark green
+    surface = Green,                     // Dark green surface
+    onSurface = White,                   // White text on dark green surface
     
     error = Color(0xFFBA1A1A),         // Material error for light
     onError = White,

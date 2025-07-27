@@ -16,9 +16,11 @@ val Green = Color(0xFF046532)      // Dark green
 val Green2 = Color(0xFF048f3e)     // Medium green
 val Green3 = Color(0xFF0b9743)     // Light green
 val White = Color(0xFFFFFFFF)      // Pure white
+val Square = Color(0xFFf8eec1)     // Black square
+val Black = Color(0xFF000000)      // Pure black
 
 // Additional green shades for containers and variants
-val GreenContainer = Color(0xFF90E0A8)     // Very light green for containers
+val GreenContainer = Color(0xFF048f3e)     // Very light green for containers
 val GreenContainerDark = Color(0xFF1B3B1E) // Dark green for dark mode containers
 val GreenSurface = Color(0xFFF1F8F2)       // Very light green tint for surfaces
 

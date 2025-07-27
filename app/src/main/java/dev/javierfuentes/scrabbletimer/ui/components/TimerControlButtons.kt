@@ -36,9 +36,13 @@ fun TimerControlButtons(
                 .height(64.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = if (isPlaying) 
-                    MaterialTheme.colorScheme.error 
-                else 
-                    MaterialTheme.colorScheme.primary
+                    MaterialTheme.colorScheme.onSecondaryContainer
+                else
+                    MaterialTheme.colorScheme.secondary,
+                contentColor = if (isPlaying)
+                    MaterialTheme.colorScheme.onSurface
+                else
+                    MaterialTheme.colorScheme.onSurface
             )
         ) {
             Icon(
@@ -54,13 +58,14 @@ fun TimerControlButtons(
             )
         }
         
-        OutlinedButton(
+        Button(
             onClick = onResetClick,
             modifier = Modifier
                 .weight(1f)
                 .height(64.dp),
             colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.secondary
+                contentColor = MaterialTheme.colorScheme.onSurface,
+                containerColor = MaterialTheme.colorScheme.secondary
             )
         ) {
             Icon(
