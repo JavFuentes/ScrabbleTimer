@@ -6,6 +6,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -22,6 +23,34 @@ fun TimeOptionCard(
     onTimeSelected: (TimeOption) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val configuration = LocalConfiguration.current
+    val isLandscape = configuration.screenWidthDp > configuration.screenHeightDp
+    val isCompactHeight = configuration.screenHeightDp < 500
+    
+    // Adaptive sizing for landscape
+    val mainFontSize = when {
+        isLandscape && isCompactHeight -> 20.sp
+        isLandscape -> 24.sp
+        else -> 28.sp
+    }
+    
+    val descriptionFontSize = when {
+        isLandscape && isCompactHeight -> 9.sp
+        isLandscape -> 10.sp
+        else -> 12.sp
+    }
+    
+    val cardPadding = when {
+        isLandscape && isCompactHeight -> 8.dp
+        isLandscape -> 12.dp
+        else -> 16.dp
+    }
+    
+    val spacerSize = when {
+        isLandscape -> 6.dp
+        else -> 4.dp
+    }
+    
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -32,27 +61,54 @@ fun TimeOptionCard(
             containerColor = MaterialTheme.colorScheme.tertiary
         )
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            Text(
-                text = stringResource(timeOption.displayTextRes),
-                fontSize = 28.sp,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onTertiary,
-                textAlign = TextAlign.Center
-            )
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = stringResource(timeOption.descriptionRes),
-                fontSize = 12.sp,
-                color = MaterialTheme.colorScheme.onTertiary,
-                textAlign = TextAlign.Center
-            )
+        if (isLandscape) {
+            // Horizontal layout for landscape
+            Row(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(cardPadding),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = stringResource(timeOption.displayTextRes),
+                    fontSize = mainFontSize,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onTertiary,
+                    textAlign = TextAlign.Center
+                )
+                Spacer(modifier = Modifier.width(spacerSize))
+                Text(
+                    text = stringResource(timeOption.descriptionRes),
+                    fontSize = descriptionFontSize,
+                    color = MaterialTheme.colorScheme.onTertiary,
+                    textAlign = TextAlign.Center
+                )
+            }
+        } else {
+            // Vertical layout for portrait (original)
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(cardPadding),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = stringResource(timeOption.displayTextRes),
+                    fontSize = mainFontSize,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onTertiary,
+                    textAlign = TextAlign.Center
+                )
+                Spacer(modifier = Modifier.height(spacerSize))
+                Text(
+                    text = stringResource(timeOption.descriptionRes),
+                    fontSize = descriptionFontSize,
+                    color = MaterialTheme.colorScheme.onTertiary,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 }
