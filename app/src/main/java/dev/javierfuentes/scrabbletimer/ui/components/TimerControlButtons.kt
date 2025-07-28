@@ -91,14 +91,14 @@ fun TimerControlButtonsPreview() {
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Text("Playing State:")
+            Text(stringResource(R.string.preview_playing_state))
             TimerControlButtons(
                 isPlaying = true,
                 onPlayPauseClick = {},
                 onResetClick = {}
             )
             
-            Text("Paused State:")
+            Text(stringResource(R.string.preview_paused_state))
             TimerControlButtons(
                 isPlaying = false,
                 onPlayPauseClick = {},

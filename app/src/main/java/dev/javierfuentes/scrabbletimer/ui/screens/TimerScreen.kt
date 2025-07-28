@@ -12,13 +12,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import dev.javierfuentes.scrabbletimer.R
 import dev.javierfuentes.scrabbletimer.data.TimerState
 import dev.javierfuentes.scrabbletimer.ui.components.TimerControlButtons
 import dev.javierfuentes.scrabbletimer.ui.components.TimerDisplay
 import dev.javierfuentes.scrabbletimer.ui.theme.ScrabbleTimerTheme
+import dev.javierfuentes.scrabbletimer.ui.viewmodel.TimerViewModel
 import dev.javierfuentes.scrabbletimer.utils.TimerNotificationHelper
-import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -26,26 +27,20 @@ fun TimerScreen(
     modifier: Modifier = Modifier,
     selectedMinutes: Int,
     onBackClick: () -> Unit = {},
+    viewModel: TimerViewModel = viewModel()
 ) {
     val context = LocalContext.current
     val notificationHelper = remember { TimerNotificationHelper(context) }
+    val uiState by viewModel.uiState.collectAsState()
     
-    // Timer state management
-    var timerState by remember { mutableStateOf(TimerState.IDLE) }
-    val totalSeconds = selectedMinutes * 60
-    var remainingSeconds by remember { mutableIntStateOf(totalSeconds) }
+    // Initialize timer with selected minutes
+    LaunchedEffect(selectedMinutes) {
+        viewModel.initializeTimer(selectedMinutes)
+    }
     
-    // Convert seconds to minutes and seconds for display
-    val displayMinutes = remainingSeconds / 60
-    val displaySeconds = remainingSeconds % 60
-    
-    // Countdown logic
-    LaunchedEffect(timerState, remainingSeconds) {
-        if (timerState == TimerState.RUNNING && remainingSeconds > 0) {
-            delay(1000L)
-            remainingSeconds--
-        } else if (remainingSeconds == 0 && timerState == TimerState.RUNNING) {
-            timerState = TimerState.FINISHED
+    // Set timer finished callback
+    LaunchedEffect(Unit) {
+        viewModel.setOnTimerFinishedCallback {
             notificationHelper.playTimerFinishedNotification()
         }
     }
@@ -86,29 +81,19 @@ fun TimerScreen(
             verticalArrangement = Arrangement.SpaceEvenly
         ) {
             TimerDisplay(
-                minutes = displayMinutes,
-                seconds = displaySeconds,
-                timerState = timerState,
+                minutes = uiState.displayMinutes,
+                seconds = uiState.displaySeconds,
+                timerState = uiState.timerState,
                 modifier = Modifier.weight(1f, fill = false)
             )
             
             TimerControlButtons(
-                isPlaying = timerState == TimerState.RUNNING,
+                isPlaying = uiState.timerState == TimerState.RUNNING,
                 onPlayPauseClick = { 
-                    timerState = when (timerState) {
-                        TimerState.IDLE -> TimerState.RUNNING
-                        TimerState.RUNNING -> TimerState.PAUSED
-                        TimerState.PAUSED -> TimerState.RUNNING
-                        TimerState.FINISHED -> {
-                            // Reset and start from finished state
-                            remainingSeconds = totalSeconds
-                            TimerState.RUNNING
-                        }
-                    }
+                    viewModel.togglePlayPause()
                 },
                 onResetClick = { 
-                    timerState = TimerState.IDLE
-                    remainingSeconds = totalSeconds
+                    viewModel.resetTimer()
                 }
             )
         }

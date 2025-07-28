@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">스크래블 타이머</string>
+    
+    <!-- Time Selection Screen -->
+    <string name="time_selection_title">턴 시간 선택</string>
+    <string name="time_selection_subtitle">각 플레이어 턴의 시간 제한을 선택하세요</string>
+    
+    <!-- Time Options -->
+    <string name="time_1_min">1분</string>
+    <string name="time_2_min">2분</string>
+    <string name="time_3_min">3분</string>
+    <string name="time_4_min">4분</string>
+    <string name="time_5_min">5분</string>
+    
+    <string name="time_1_min_desc">빠른 게임</string>
+    <string name="time_2_min_desc">보통 속도</string>
+    <string name="time_3_min_desc">표준 시간</string>
+    <string name="time_4_min_desc">여유로운 속도</string>
+    <string name="time_5_min_desc">확장된 시간</string>
+    
+    <!-- Timer Screen -->
+    <string name="timer_screen_title">타이머</string>
+    <string name="selected_time_minutes">선택됨: %d분</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="under_construction">개발 중…</string>
+    
+    <!-- Timer Controls -->
+    <string name="play">재생</string>
+    <string name="pause">일시정지</string>
+    <string name="reset">재설정</string>
+    <string name="start_timer">타이머 시작</string>
+    <string name="pause_timer">타이머 일시정지</string>
+    <string name="reset_timer">타이머 재설정</string>
+    
+    <!-- Content Descriptions -->
+    <string name="play_pause_button">타이머 재생 또는 일시정지</string>
+    <string name="reset_button">타이머를 초기 시간으로 재설정</string>
+    <string name="back_button">시간 선택으로 돌아가기</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_scrabble">SCRABBLE</string>
+    <string name="splash_timer">TIMER</string>
+    
+    <!-- Preview Labels (for development only) -->
+    <string name="preview_playing_state">재생 상태:</string>
+    <string name="preview_paused_state">일시정지 상태:</string>
+</resources>

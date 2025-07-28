@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">拼字游戏计时器</string>
+    
+    <!-- Time Selection Screen -->
+    <string name="time_selection_title">选择回合时间</string>
+    <string name="time_selection_subtitle">为每位玩家的回合选择时间限制</string>
+    
+    <!-- Time Options -->
+    <string name="time_1_min">1分钟</string>
+    <string name="time_2_min">2分钟</string>
+    <string name="time_3_min">3分钟</string>
+    <string name="time_4_min">4分钟</string>
+    <string name="time_5_min">5分钟</string>
+    
+    <string name="time_1_min_desc">快速游戏</string>
+    <string name="time_2_min_desc">中等节奏</string>
+    <string name="time_3_min_desc">标准时间</string>
+    <string name="time_4_min_desc">轻松节奏</string>
+    <string name="time_5_min_desc">延长时间</string>
+    
+    <!-- Timer Screen -->
+    <string name="timer_screen_title">计时器</string>
+    <string name="selected_time_minutes">已选择：%d分钟</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="under_construction">正在开发…</string>
+    
+    <!-- Timer Controls -->
+    <string name="play">播放</string>
+    <string name="pause">暂停</string>
+    <string name="reset">重置</string>
+    <string name="start_timer">启动计时器</string>
+    <string name="pause_timer">暂停计时器</string>
+    <string name="reset_timer">重置计时器</string>
+    
+    <!-- Content Descriptions -->
+    <string name="play_pause_button">播放或暂停计时器</string>
+    <string name="reset_button">将计时器重置为初始时间</string>
+    <string name="back_button">返回时间选择</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_scrabble">SCRABBLE</string>
+    <string name="splash_timer">TIMER</string>
+    
+    <!-- Preview Labels (for development only) -->
+    <string name="preview_playing_state">播放状态：</string>
+    <string name="preview_paused_state">暂停状态：</string>
+</resources>

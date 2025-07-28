@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
@@ -47,7 +48,7 @@ fun SplashScreen(
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "SCRABBLE",
+                text = stringResource(R.string.splash_scrabble),
                 fontSize = 64.sp,
                 fontFamily = scrabblesFontFamily,
                 color = White,
@@ -58,7 +59,7 @@ fun SplashScreen(
             Spacer(modifier = Modifier.height(8.dp))
             
             Text(
-                text = "TIMER",
+                text = stringResource(R.string.splash_timer),
                 fontSize = 64.sp,
                 fontFamily = scrabblesFontFamily,
                 color = White,

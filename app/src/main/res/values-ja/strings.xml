@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">スクラブルタイマー</string>
+    
+    <!-- Time Selection Screen -->
+    <string name="time_selection_title">ターン時間を選択</string>
+    <string name="time_selection_subtitle">各プレイヤーのターンの制限時間を選択してください</string>
+    
+    <!-- Time Options -->
+    <string name="time_1_min">1分</string>
+    <string name="time_2_min">2分</string>
+    <string name="time_3_min">3分</string>
+    <string name="time_4_min">4分</string>
+    <string name="time_5_min">5分</string>
+    
+    <string name="time_1_min_desc">クイックゲーム</string>
+    <string name="time_2_min_desc">普通のペース</string>
+    <string name="time_3_min_desc">標準時間</string>
+    <string name="time_4_min_desc">ゆったりペース</string>
+    <string name="time_5_min_desc">延長時間</string>
+    
+    <!-- Timer Screen -->
+    <string name="timer_screen_title">タイマー</string>
+    <string name="selected_time_minutes">選択済み: %d分</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="under_construction">開発中…</string>
+    
+    <!-- Timer Controls -->
+    <string name="play">再生</string>
+    <string name="pause">一時停止</string>
+    <string name="reset">リセット</string>
+    <string name="start_timer">タイマー開始</string>
+    <string name="pause_timer">タイマー一時停止</string>
+    <string name="reset_timer">タイマーリセット</string>
+    
+    <!-- Content Descriptions -->
+    <string name="play_pause_button">タイマーの再生または一時停止</string>
+    <string name="reset_button">タイマーを初期時間にリセット</string>
+    <string name="back_button">時間選択に戻る</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_scrabble">SCRABBLE</string>
+    <string name="splash_timer">TIMER</string>
+    
+    <!-- Preview Labels (for development only) -->
+    <string name="preview_playing_state">再生状態:</string>
+    <string name="preview_paused_state">一時停止状態:</string>
+</resources>
