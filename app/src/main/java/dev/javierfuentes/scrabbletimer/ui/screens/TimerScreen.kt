@@ -7,6 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -16,6 +17,7 @@ import dev.javierfuentes.scrabbletimer.data.TimerState
 import dev.javierfuentes.scrabbletimer.ui.components.TimerControlButtons
 import dev.javierfuentes.scrabbletimer.ui.components.TimerDisplay
 import dev.javierfuentes.scrabbletimer.ui.theme.ScrabbleTimerTheme
+import dev.javierfuentes.scrabbletimer.utils.TimerNotificationHelper
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -25,6 +27,9 @@ fun TimerScreen(
     selectedMinutes: Int,
     onBackClick: () -> Unit = {},
 ) {
+    val context = LocalContext.current
+    val notificationHelper = remember { TimerNotificationHelper(context) }
+    
     // Timer state management
     var timerState by remember { mutableStateOf(TimerState.IDLE) }
     val totalSeconds = selectedMinutes * 60
@@ -41,6 +46,14 @@ fun TimerScreen(
             remainingSeconds--
         } else if (remainingSeconds == 0 && timerState == TimerState.RUNNING) {
             timerState = TimerState.FINISHED
+            notificationHelper.playTimerFinishedNotification()
+        }
+    }
+    
+    // Clean up notification helper when composable is disposed
+    DisposableEffect(notificationHelper) {
+        onDispose {
+            notificationHelper.release()
         }
     }
     
