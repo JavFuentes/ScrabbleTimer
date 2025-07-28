@@ -36,4 +36,12 @@
     <string name="play_pause_button">Play or pause timer</string>
     <string name="reset_button">Reset timer to initial time</string>
     <string name="back_button">Go back to time selection</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_scrabble">SCRABBLE</string>
+    <string name="splash_timer">TIMER</string>
+    
+    <!-- Preview Labels (for development only) -->
+    <string name="preview_playing_state">Playing State:</string>
+    <string name="preview_paused_state">Paused State:</string>
 </resources>

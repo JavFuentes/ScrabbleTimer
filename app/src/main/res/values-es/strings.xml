@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Temporizador Scrabble</string>
+    
+    <!-- Time Selection Screen -->
+    <string name="time_selection_title">Seleccionar Tiempo de Turno</string>
+    <string name="time_selection_subtitle">Elige el límite de tiempo para el turno de cada jugador</string>
+    
+    <!-- Time Options -->
+    <string name="time_1_min">1 min</string>
+    <string name="time_2_min">2 min</string>
+    <string name="time_3_min">3 min</string>
+    <string name="time_4_min">4 min</string>
+    <string name="time_5_min">5 min</string>
+    
+    <string name="time_1_min_desc">Juego rápido</string>
+    <string name="time_2_min_desc">Ritmo moderado</string>
+    <string name="time_3_min_desc">Tiempo estándar</string>
+    <string name="time_4_min_desc">Ritmo relajado</string>
+    <string name="time_5_min_desc">Tiempo extendido</string>
+    
+    <!-- Timer Screen -->
+    <string name="timer_screen_title">Temporizador</string>
+    <string name="selected_time_minutes">Seleccionado: %d min</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="under_construction">En construcción…</string>
+    
+    <!-- Timer Controls -->
+    <string name="play">Empezar</string>
+    <string name="pause">Pausar</string>
+    <string name="reset">Reiniciar</string>
+    <string name="start_timer">Iniciar Temporizador</string>
+    <string name="pause_timer">Pausar Temporizador</string>
+    <string name="reset_timer">Reiniciar Temporizador</string>
+    
+    <!-- Content Descriptions -->
+    <string name="play_pause_button">Reproducir o pausar temporizador</string>
+    <string name="reset_button">Reiniciar temporizador al tiempo inicial</string>
+    <string name="back_button">Volver a selección de tiempo</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_scrabble">SCRABBLE</string>
+    <string name="splash_timer">TIMER</string>
+    
+    <!-- Preview Labels (for development only) -->
+    <string name="preview_playing_state">Estado Reproduciendo:</string>
+    <string name="preview_paused_state">Estado Pausado:</string>
+</resources>

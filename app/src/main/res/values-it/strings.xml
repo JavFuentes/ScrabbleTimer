@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Timer Scrabble</string>
+    
+    <!-- Time Selection Screen -->
+    <string name="time_selection_title">Seleziona Tempo del Turno</string>
+    <string name="time_selection_subtitle">Scegli il limite di tempo per il turno di ogni giocatore</string>
+    
+    <!-- Time Options -->
+    <string name="time_1_min">1 min</string>
+    <string name="time_2_min">2 min</string>
+    <string name="time_3_min">3 min</string>
+    <string name="time_4_min">4 min</string>
+    <string name="time_5_min">5 min</string>
+    
+    <string name="time_1_min_desc">Gioco veloce</string>
+    <string name="time_2_min_desc">Ritmo moderato</string>
+    <string name="time_3_min_desc">Tempo standard</string>
+    <string name="time_4_min_desc">Ritmo rilassato</string>
+    <string name="time_5_min_desc">Tempo esteso</string>
+    
+    <!-- Timer Screen -->
+    <string name="timer_screen_title">Timer</string>
+    <string name="selected_time_minutes">Selezionato: %d min</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="under_construction">In costruzione…</string>
+    
+    <!-- Timer Controls -->
+    <string name="play">Riproduci</string>
+    <string name="pause">Pausa</string>
+    <string name="reset">Reimposta</string>
+    <string name="start_timer">Avvia Timer</string>
+    <string name="pause_timer">Metti in Pausa Timer</string>
+    <string name="reset_timer">Reimposta Timer</string>
+    
+    <!-- Content Descriptions -->
+    <string name="play_pause_button">Riproduci o metti in pausa il timer</string>
+    <string name="reset_button">Reimposta il timer al tempo iniziale</string>
+    <string name="back_button">Torna alla selezione del tempo</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_scrabble">SCRABBLE</string>
+    <string name="splash_timer">TIMER</string>
+    
+    <!-- Preview Labels (for development only) -->
+    <string name="preview_playing_state">Stato Riproduzione:</string>
+    <string name="preview_paused_state">Stato Pausa:</string>
+</resources>

@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Minuteur Scrabble</string>
+    
+    <!-- Time Selection Screen -->
+    <string name="time_selection_title">Sélectionner le Temps du Tour</string>
+    <string name="time_selection_subtitle">Choisissez la limite de temps pour le tour de chaque joueur</string>
+    
+    <!-- Time Options -->
+    <string name="time_1_min">1 min</string>
+    <string name="time_2_min">2 min</string>
+    <string name="time_3_min">3 min</string>
+    <string name="time_4_min">4 min</string>
+    <string name="time_5_min">5 min</string>
+    
+    <string name="time_1_min_desc">Jeu rapide</string>
+    <string name="time_2_min_desc">Rythme modéré</string>
+    <string name="time_3_min_desc">Temps standard</string>
+    <string name="time_4_min_desc">Rythme détendu</string>
+    <string name="time_5_min_desc">Temps étendu</string>
+    
+    <!-- Timer Screen -->
+    <string name="timer_screen_title">Minuteur</string>
+    <string name="selected_time_minutes">Sélectionné: %d min</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="under_construction">En construction…</string>
+    
+    <!-- Timer Controls -->
+    <string name="play">Lire</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="start_timer">Démarrer le Minuteur</string>
+    <string name="pause_timer">Mettre en Pause</string>
+    <string name="reset_timer">Réinitialiser le Minuteur</string>
+    
+    <!-- Content Descriptions -->
+    <string name="play_pause_button">Lire ou mettre en pause le minuteur</string>
+    <string name="reset_button">Réinitialiser le minuteur au temps initial</string>
+    <string name="back_button">Retourner à la sélection du temps</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_scrabble">SCRABBLE</string>
+    <string name="splash_timer">MINUTEUR</string>
+    
+    <!-- Preview Labels (for development only) -->
+    <string name="preview_playing_state">État Lecture:</string>
+    <string name="preview_paused_state">État Pause:</string>
+</resources>
