@@ -7,10 +7,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import dev.javierfuentes.scrabbletimer.ui.screens.SplashScreen
 import dev.javierfuentes.scrabbletimer.ui.screens.TimeSelectionScreen
 import dev.javierfuentes.scrabbletimer.ui.screens.TimerScreen
 
 object Routes {
+    const val SPLASH = "splash"
     const val TIME_SELECTION = "time_selection"
     const val TIMER = "timer/{minutes}"
     
@@ -23,8 +25,18 @@ fun ScrabbleNavigation(
 ) {
     NavHost(
         navController = navController,
-        startDestination = Routes.TIME_SELECTION
+        startDestination = Routes.SPLASH
     ) {
+        composable(Routes.SPLASH) {
+            SplashScreen(
+                onSplashFinished = {
+                    navController.navigate(Routes.TIME_SELECTION) {
+                        popUpTo(Routes.SPLASH) { inclusive = true }
+                    }
+                }
+            )
+        }
+        
         composable(Routes.TIME_SELECTION) {
             TimeSelectionScreen(
                 onTimeSelected = { timeOption ->

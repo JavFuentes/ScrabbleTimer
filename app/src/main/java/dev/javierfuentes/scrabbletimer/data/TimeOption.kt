@@ -5,8 +5,8 @@ import dev.javierfuentes.scrabbletimer.R
 
 data class TimeOption(
     val minutes: Int,
-    @StringRes val displayTextRes: Int,
-    @StringRes val descriptionRes: Int
+    @param:StringRes val displayTextRes: Int,
+    @param:StringRes val descriptionRes: Int
 ) {
     companion object {
         fun getTimeOptions(): List<TimeOption> = listOf(

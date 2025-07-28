@@ -46,19 +46,11 @@ class TimerNotificationHelper(private val context: Context) {
     
     private fun vibrate() {
         vibrator?.let { vib ->
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                // Create a vibration pattern: pause, vibrate, pause, vibrate
-                val timings = longArrayOf(0, 500, 200, 500, 200, 500)
-                val amplitudes = intArrayOf(0, 255, 0, 255, 0, 255)
-                val vibrationEffect = VibrationEffect.createWaveform(timings, amplitudes, -1)
-                vib.vibrate(vibrationEffect)
-            } else {
-                // Fallback for older Android versions
-                @Suppress("DEPRECATION")
-                val pattern = longArrayOf(0, 500, 200, 500, 200, 500)
-                @Suppress("DEPRECATION")
-                vib.vibrate(pattern, -1)
-            }
+            // Create a vibration pattern: pause, vibrate, pause, vibrate
+            val timings = longArrayOf(0, 500, 200, 500, 200, 500)
+            val amplitudes = intArrayOf(0, 255, 0, 255, 0, 255)
+            val vibrationEffect = VibrationEffect.createWaveform(timings, amplitudes, -1)
+            vib.vibrate(vibrationEffect)
         }
     }
     

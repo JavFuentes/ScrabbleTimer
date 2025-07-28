@@ -33,7 +33,7 @@ private val DarkGreenColorScheme = darkColorScheme(
     
     error = Color(0xFFFFB4AB),          // Material error for dark
     onError = Color(0xFF690005),
-    errorContainer = Green,
+    errorContainer = Green3,
     onErrorContainer = Color(0xFFFFDAD6)
 )
 
@@ -59,7 +59,7 @@ private val LightGreenColorScheme = lightColorScheme(
     
     error = Color(0xFFBA1A1A),         // Material error for light
     onError = White,
-    errorContainer = Green,
+    errorContainer = Green2,
     onErrorContainer = Color(0xFF410002)
 
 
