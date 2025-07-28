@@ -7,6 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -52,6 +53,10 @@ fun TimerScreen(
         }
     }
     
+    val configuration = LocalConfiguration.current
+    val isLandscape = configuration.screenWidthDp > configuration.screenHeightDp
+    val isCompactHeight = configuration.screenHeightDp < 500
+    
     Scaffold(
         topBar = {
             TopAppBar(
@@ -76,15 +81,25 @@ fun TimerScreen(
             modifier = modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(24.dp),
+                .padding(horizontal = if (isLandscape || isCompactHeight) 16.dp else 24.dp)
+                .padding(vertical = if (isLandscape || isCompactHeight) 8.dp else 24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceEvenly
+            verticalArrangement = Arrangement.Center
         ) {
             TimerDisplay(
                 minutes = uiState.displayMinutes,
                 seconds = uiState.displaySeconds,
-                timerState = uiState.timerState,
-                modifier = Modifier.weight(1f, fill = false)
+                timerState = uiState.timerState
+            )
+            
+            Spacer(
+                modifier = Modifier.height(
+                    when {
+                        isCompactHeight -> 12.dp
+                        isLandscape -> 16.dp
+                        else -> 24.dp
+                    }
+                )
             )
             
             TimerControlButtons(

@@ -1,6 +1,14 @@
 # 🎲 Scrabble Timer
 
-A modern Android timer application designed specifically for Scrabble players to limit turn time and enhance gameplay experience.
+<div align="center">
+
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
+
+**A modern Android timer application designed specifically for Scrabble players to limit turn time and enhance gameplay experience.**
+
+</div>
 
 ## 📱 Features
 
@@ -180,7 +188,7 @@ For more information about the author and his projects, visit http://javierfuent
 **Did you like the project? Give it a ⭐!**
 
 <a href='https://ko-fi.com/I2I2OPHE0' target='_blank'>
-
+  <img height='36' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Cómprame un café en ko-fi.com' />
 </a>
 
 </div>
